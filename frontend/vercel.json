@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "type": "vite",
+      "src": "index.html",
+      "config": {
+        "framework": "vite"
+      }
+    }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}

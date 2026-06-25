@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:5001',
+        target: 'https://furninest-bzdp.onrender.com',
         changeOrigin: true,
         secure: false,
       }

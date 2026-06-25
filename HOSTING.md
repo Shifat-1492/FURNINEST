@@ -75,7 +75,11 @@ npm run preview
 
 ## Deployment Scenarios
 
-### Scenario 1: **Render.com** (Recommended for Beginners)
+### Scenario 1: **Render.com** (Recommended - See RENDER_DEPLOYMENT.md)
+
+**⚠️ IMPORTANT:** For detailed step-by-step Render deployment instructions, see [RENDER_DEPLOYMENT.md](RENDER_DEPLOYMENT.md)
+
+This section provides a quick overview. For complete setup including MongoDB Atlas configuration, environment variables, and troubleshooting, refer to the dedicated Render deployment guide.
 
 #### Backend Deployment
 

@@ -14,23 +14,20 @@ const Messages = () => {
       navigate('/login');
       return;
     }
-    axios.get('http://localhost:5001/api/messages/inbox')
+    axios.get('/api/messages/inbox')
       .then(res => {
         setMessages(res.data);
         setLoading(false);
       })
-      .catch(err => {
-        console.error(err);
-        setLoading(false);
-      });
+      .catch(() => setLoading(false));
   }, [user, navigate]);
 
   const markAsRead = async (id) => {
     try {
-      await axios.patch(`http://localhost:5001/api/messages/${id}/read`);
+      await axios.patch(`/api/messages/${id}/read`);
       setMessages(messages.map(m => m._id === id ? { ...m, read: true } : m));
-    } catch (err) {
-      console.error(err);
+    } catch {
+      // Silent fail for read status
     }
   };
 

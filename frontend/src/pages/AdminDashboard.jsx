@@ -148,13 +148,13 @@ const AdminDashboard = () => {
               >
                 {/* Image or Icon Container */}
                 <div className="relative">
-                  {listing.images && listing.images.length > 0 ? (
-                    <img 
-                      src={`http://localhost:5001/uploads/${listing.images[0]}`} 
-                      alt={listing.title} 
-                      className="w-full h-48 object-cover"
-                    />
-                  ) : (
+{listing.images && listing.images.length > 0 ? (
+                     <img 
+                       src={`${import.meta.env.VITE_API_URL || ''}/uploads/${listing.images[0]}`} 
+                       alt={listing.title} 
+                       className="w-full h-48 object-cover"
+                     />
+                   ) : (
                     <div 
                       className="w-full h-48 bg-gray-50 flex items-center justify-center text-6xl"
                       dangerouslySetInnerHTML={{ __html: listing.category?.icon || '🪑' }}

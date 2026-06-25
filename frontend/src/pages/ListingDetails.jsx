@@ -78,7 +78,7 @@ const ListingDetails = () => {
 {listing.images && listing.images.length > 0 ? (
               <>
                 <img
-                  src={`http://localhost:5001/uploads/${listing.images[activeImage]}`}
+                  src={`${import.meta.env.VITE_API_URL || ''}/uploads/${listing.images[activeImage]}`}
                   alt={listing.title}
                   className="w-full h-96 object-cover rounded-2xl shadow-md mb-4"
                 />
@@ -87,7 +87,7 @@ const ListingDetails = () => {
                   {listing.images.map((img, i) => (
                     <img
                       key={i}
-                      src={`http://localhost:5001/uploads/${img}`}
+                      src={`${import.meta.env.VITE_API_URL || ''}/uploads/${img}`}
                       alt=""
                       onClick={() => setActiveImage(i)}
                       className={`w-20 h-20 object-cover rounded-lg cursor-pointer border-2 transition ${activeImage === i ? 'border-green-700' : 'border-transparent'}`}

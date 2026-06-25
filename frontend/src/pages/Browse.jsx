@@ -169,7 +169,7 @@ const Browse = () => {
                   <span className="listing-badge">{listing.condition}</span>
                 )}
                 {listing.images && listing.images.length > 0 ? (
-                  <img src={`http://localhost:5001/uploads/${listing.images[0]}`} alt={listing.title} className="w-full h-52 object-cover" />
+                  <img src={`${import.meta.env.VITE_API_URL || ''}/uploads/${listing.images[0]}`} alt={listing.title} className="w-full h-52 object-cover" />
                 ) : (
                   <div
                     className="w-full h-52 bg-gray-50 flex items-center justify-center text-5xl"
